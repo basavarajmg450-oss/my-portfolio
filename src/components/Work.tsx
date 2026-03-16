@@ -2,37 +2,36 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "EduHub",
+    category: "College Management & Student Portal",
+    tools: "React, Node.js, Express.js, MongoDB",
+    image: "/images/eduhub.png",
+    link: "https://github.com/basavarajmg450-oss/eduhub.git",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "Temple Tourism",
+    category: "Travel & Temple Guide Website",
+    tools: "HTML, CSS, JavaScript",
+    image: "/images/temple.png",
+    link: "https://github.com/basavarajmg450-oss/temple-tourism.git",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Placement Pro",
+    category: "Intelligent Placement Management System",
+    tools: "React, Node.js, MongoDB, Gemini AI, Tailwind CSS",
+    image: "/images/placementpro.png",
+    link: "https://github.com/basavarajmg450-oss/SIT-3.git",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
-  },
-  {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "AI Posture Detection",
+    category: "AI Posture Detection System",
+    tools: "Python (ML), React, Node.js, MongoDB",
+    image: "/images/posture.png",
+    link: "https://github.com/01Bhavith/Mini-project.git",
   },
 ];
 
@@ -112,6 +111,15 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="view-code-button"
+                          data-cursor="disable"
+                        >
+                          <FaGithub /> View Code
+                        </a>
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
@@ -135,6 +143,18 @@ const Work = () => {
                 data-cursor="disable"
               />
             ))}
+          </div>
+          
+          <div className="view-more-container">
+            <a
+              href="https://github.com/basavarajmg450-oss"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="view-more-button"
+              data-cursor="disable"
+            >
+              <FaGithub /> View More Projects on GitHub <MdArrowForward className="external-icon" />
+            </a>
           </div>
         </div>
       </div>

@@ -316,62 +316,48 @@
 @media only screen and (max-width: 900px) {
   .whatIDO {
     flex-direction: column;
+    padding: 30px 0;
   }
   .what-box h2 {
-    margin: 50px 0;
-    font-size: 55px;
-    line-height: 53px;
+    margin: 30px 0;
+    font-size: 45px;
+    line-height: 1.1;
+    text-align: center;
+    margin-right: 0;
   }
   .what-box:first-child {
-    justify-content: left;
+    justify-content: center;
+    width: 100%;
   }
   .what-box:last-child {
-    height: 500px;
+    height: auto;
+    min-height: 400px;
   }
   .what-box {
-    width: 500px;
-    max-width: calc(100% - 50px);
+    width: 100%;
+    max-width: var(--cWidth);
     margin: auto;
   }
   .what-content {
     width: 100%;
+    padding: 25px;
   }
   .what-box-in {
     margin-left: 0px;
-    height: 450px;
+    height: auto;
+    display: flex; /* Ensure it shows up on mobile if it was hidden/none before */
   }
+  /* ... existing logic for h5 and flex ... */
   .what-content h5,
   .what-content-flex {
-    opacity: 0;
-    transition: 0.3s;
-  }
-  .what-noTouch:hover h5,
-  .what-content-active h5,
-  .what-noTouch:hover .what-content-flex,
-  .what-content-active .what-content-flex {
-    opacity: 1;
-  }
-  .what-content {
-    padding: 30px;
+    opacity: 1; /* Make them visible on mobile without hover if needed, or keep hover logic */
   }
   .what-content p {
-    font-size: 11px;
-  }
-  .what-noTouch:hover,
-  .what-content-active {
-    padding: 10px 30px;
-  }
-  .what-tags {
-    font-size: 11px;
-  }
-
-  .what-noTouch:hover ~ .what-content,
-  .what-box-in:hover .what-noTouch:not(:hover),
-  .what-content.what-sibling {
-    padding: 5px 30px;
+    font-size: 13px;
+    line-height: 1.4;
   }
   .what-content h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 @media only screen and (max-width: 550px) {

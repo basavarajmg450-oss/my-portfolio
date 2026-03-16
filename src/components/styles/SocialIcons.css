@@ -9,11 +9,11 @@
 }
 .social-icons {
   position: absolute;
-  left: -20px;
+  left: 0;
   bottom: 20px;
-  display: none;
-  flex-direction: column;
-  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
   z-index: 999;
   padding: 10px;
 }
@@ -83,8 +83,9 @@ div.resume-button span {
 }
 @media only screen and (min-width: 900px) {
   .social-icons {
-    display: flex;
+    flex-direction: column;
     gap: 20px;
+    left: -20px;
   }
   .social-icons a {
     font-size: 28px;

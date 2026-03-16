@@ -13,15 +13,14 @@
   z-index: 9999;
 }
 .header ul {
-  font-size: 12px;
+  font-size: 11px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;
-  column-gap: 40px;
-  row-gap: 8px;
-  align-items: end;
+  column-gap: 15px;
+  align-items: center;
 }
 .header ul li {
   margin-left: 0px;
@@ -41,9 +40,15 @@
   font-weight: 500;
 }
 .navbar-title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #7dd3fc 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
 }
 @media only screen and (min-width: 500px) {
   .header {
@@ -53,12 +58,13 @@
     flex-direction: row;
     align-items: center;
     font-size: 14px;
+    column-gap: 30px;
   }
   .header ul li {
     color: #eae5ec;
   }
   .navbar-title {
-    font-size: 16px;
+    font-size: 24px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -78,6 +84,6 @@
     font-size: 16px;
   }
   .navbar-title {
-    font-size: 18px;
+    font-size: 28px;
   }
 }
